@@ -14,7 +14,7 @@
     </parent>
     <groupId>com.spring.clinic</groupId>
     <artifactId>spring-clinic</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>spring-clinic</name>
     <description>Spring clinic</description>
 
@@ -41,6 +41,6 @@
 
     <scm>
        <developerConnection>scm:git:https://github.com/Lapszo/spring-clinic.git</developerConnection>
-      <tag>spring-clinic-0.0.2</tag>
+      <tag>HEAD</tag>
   </scm>
 </project>
