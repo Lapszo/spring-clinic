@@ -8,6 +8,17 @@ public class Person extends BaseEntity{
     private String city;
     private String telephone;
 
+    public Person() {
+    }
+
+    public Person(String firstName, String lastName, String address, String city, String telephone) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.city = city;
+        this.telephone = telephone;
+    }
+
     public String getAddress() {
         return address;
     }

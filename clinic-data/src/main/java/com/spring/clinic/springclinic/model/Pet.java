@@ -1,6 +1,10 @@
 package com.spring.clinic.springclinic.model;
 
+import lombok.Data;
+
+import javax.persistence.Entity;
 import java.time.LocalDate;
+
 
 public class Pet extends BaseEntity{
 
@@ -9,6 +13,16 @@ public class Pet extends BaseEntity{
     private Owner owner;
     private LocalDate birthDate;
 
+    public Pet() {
+    }
+
+    public Pet(String name, PetType petType, Owner owner, LocalDate birthDate) {
+        this.name = name;
+        this.petType = petType;
+        this.owner = owner;
+        this.birthDate = birthDate;
+    }
+
     public String getName() {
         return name;
     }
@@ -16,6 +30,7 @@ public class Pet extends BaseEntity{
     public void setName(String name) {
         this.name = name;
     }
+
     public PetType getPetType() {
         return petType;
     }
