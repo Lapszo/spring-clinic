@@ -1,8 +1,8 @@
 package com.spring.clinic.springclinic.services.impl;
 
-import com.spring.clinic.springclinic.model.Vet;
-import com.spring.clinic.springclinic.repositories.VetRepository;
-import com.spring.clinic.springclinic.services.VetService;
+import com.spring.clinic.springclinic.model.Visit;
+import com.spring.clinic.springclinic.repositories.VisitRepository;
+import com.spring.clinic.springclinic.services.VisitService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -10,33 +10,33 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-public class VetServiceImpl implements VetService {
+public class VisitServiceImpl implements VisitService {
 
-    private final VetRepository vetRepository;
+    private final VisitRepository vetRepository;
 
-    public VetServiceImpl(VetRepository vetRepository) {
+    public VisitServiceImpl(VisitRepository vetRepository) {
         this.vetRepository = vetRepository;
     }
 
     @Override
-    public Set<Vet> findAll() {
-        Set<Vet> vets = new HashSet<>();
+    public Set<Visit> findAll() {
+        Set<Visit> vets = new HashSet<>();
         vetRepository.findAll().forEach(vets::add);
         return vets;
     }
 
     @Override
-    public Vet findById(Long aLong) {
+    public Visit findById(Long aLong) {
         return vetRepository.findById(aLong).orElse(null);
     }
 
     @Override
-    public Vet save(Vet object) {
+    public Visit save(Visit object) {
         return vetRepository.save(object);
     }
 
     @Override
-    public void delete(Vet object) {
+    public void delete(Visit object) {
         vetRepository.delete(object);
     }
 

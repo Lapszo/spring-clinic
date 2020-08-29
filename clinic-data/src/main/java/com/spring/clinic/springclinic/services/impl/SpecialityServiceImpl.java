@@ -10,7 +10,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-@Profile("serviceimpl")
 public class SpecialityServiceImpl implements SpecialityService {
 
     private final SpecialityRepository specialityRepository;

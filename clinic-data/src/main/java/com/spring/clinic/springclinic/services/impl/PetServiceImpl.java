@@ -10,7 +10,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-@Profile("serviceimpl")
 public class PetServiceImpl implements PetService {
 
     private final PetRepository petRepository;

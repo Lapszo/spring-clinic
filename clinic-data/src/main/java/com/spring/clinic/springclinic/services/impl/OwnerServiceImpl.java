@@ -12,7 +12,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-@Profile("serviceimpl")
 public class OwnerServiceImpl implements OwnerService {
     private final OwnerRepository ownerRepository;
     private final PetRepository petRepository;
