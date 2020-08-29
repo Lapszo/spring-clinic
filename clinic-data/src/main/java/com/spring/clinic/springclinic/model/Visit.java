@@ -15,7 +15,6 @@ public class Visit extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "pet_id")
-    @Column(name = "pet")
     private Pet pet;
 
     public Visit() {

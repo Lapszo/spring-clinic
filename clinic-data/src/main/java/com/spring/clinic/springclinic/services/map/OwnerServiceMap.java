@@ -5,7 +5,6 @@ import com.spring.clinic.springclinic.model.Pet;
 import com.spring.clinic.springclinic.services.OwnerService;
 import com.spring.clinic.springclinic.services.PetService;
 import com.spring.clinic.springclinic.services.PetTypeService;
-import net.bytebuddy.implementation.bind.annotation.RuntimeType;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;

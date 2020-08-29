@@ -1,6 +1,5 @@
 package com.spring.clinic.springclinic.model;
 
-import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -16,25 +15,22 @@ public class Pet extends BaseEntity{
 
     @ManyToOne
     @JoinColumn(name = "pet_type_id")
-    @Column(name = "name")
     private PetType petType;
 
     @ManyToOne
     @JoinColumn(name = "owner_id")
-    @Column(name = "owner")
     private Owner owner;
 
     @Column(name = "birth_date")
     private LocalDate birthDate;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
-    @Column(name = "visit_id")
-    private Set<Vet> visits = new HashSet<>();
+    private Set<Visit> visits = new HashSet<>();
 
     public Pet() {
     }
 
-    public Pet(String name, PetType petType, Owner owner, LocalDate birthDate, Set<Vet> visits) {
+    public Pet(String name, PetType petType, Owner owner, LocalDate birthDate, Set<Visit> visits) {
         this.name = name;
         this.petType = petType;
         this.owner = owner;
@@ -74,11 +70,11 @@ public class Pet extends BaseEntity{
         this.birthDate = birthDate;
     }
 
-    public Set<Vet> getVisits() {
+    public Set<Visit> getVisits() {
         return visits;
     }
 
-    public void setVisits(Set<Vet> visits) {
+    public void setVisits(Set<Visit> visits) {
         this.visits = visits;
     }
 }
