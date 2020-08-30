@@ -25,4 +25,9 @@ public class OwnerController {
     public String findOwners(){
         return "notImplemented";
     }
+
+
+    public int add(){
+        return 5+4;
+    }
 }
