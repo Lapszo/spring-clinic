@@ -3,7 +3,7 @@
     <parent>
         <artifactId>spring-clinic</artifactId>
         <groupId>com.spring.clinic</groupId>
-        <version>0.0.3</version>
+        <version>0.0.4-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -18,7 +18,7 @@
         <dependency>
             <artifactId>clinic-data</artifactId>
             <groupId>com.spring.clinic</groupId>
-            <version>0.0.3</version>
+            <version>0.0.4-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
